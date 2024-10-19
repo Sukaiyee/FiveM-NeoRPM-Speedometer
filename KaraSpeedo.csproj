@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>10.0</LangVersion> <!-- Set language version to 10.0 -->
+    <ImplicitUsings>enable</ImplicitUsings> <!-- Keep implicit using -->
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Speedo.net</AssemblyName>
+    <OutputPath>bin\Debug\net472\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CitizenFX.Core.Client" Version="1.0.10230" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

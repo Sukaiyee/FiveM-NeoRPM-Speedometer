@@ -1,0 +1,154 @@
+.speedo-container {
+    position: absolute;
+    bottom: 5vh; /* This will apply to most resolutions */
+    left: 21vw;
+    width: 250px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    transform: translateX(-50%);
+}
+
+/* Adjustments for 1080p screens */
+@media screen and (max-height: 1080px) {
+    .speedo-container {
+        bottom: 7vh; /* Increase for lower height screens */
+    }
+}
+
+/* Adjustments for 1440p screens */
+@media screen and (min-height: 1440px) {
+    .speedo-container {
+        bottom: 5vh; /* Adjust accordingly for higher resolutions */
+    }
+}
+
+
+
+
+.gear-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* This stacks the icon vertically under the "R" */
+    top: -10px; /* Adjust to move it vertically */
+    left: -110px; /* Adjust left or right as needed */
+}
+
+.gear-indicator {
+    background: linear-gradient(135deg, #0b4033 20%, #156653 40%, #25D5AC 60%, #4ee3c8 80%); /* Gradient pattern with dark to light greens */
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 21px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3); /* Subtle inner shadow for depth */
+}
+
+
+
+.gear-text {
+    position: relative;
+    z-index: 1;
+}
+
+.gear-symbol {
+    width: 20px; /* Size of the icon */
+    height: 20px;
+    margin-top: 5px; /* Spacing between the "R" and the gear icon */
+}
+
+.speed-container {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center; /* Center the speed text */
+    align-items: center;
+    flex-direction: column; /* Ensure the speed and unit stack vertically */
+}
+
+.speed-value {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: transparent;
+    background: linear-gradient(135deg, #0b4033 20%, #156653 40%, #25D5AC 60%, #4ee3c8 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: none;
+    display: inline-block; /* Helps with centering */
+}
+
+.speed-unit {
+    font-size: 18px;
+    color: #FEFEF6;
+    opacity: 0.7;
+    margin-left: 5px; /* Reduce this value to move KMH left */
+    position: relative;
+    top: -60px; /* Adjust this to move KMH closer to the speed text */
+    right: -90px; /* Adjust this to move KMH closer to the fuel bar */
+}
+
+.rpm-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #545048;
+    margin-top: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.rpm-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0b4033 0%, #156653 30%, #25D5AC 60%, #4ee3c8 100%); /* Gradient from dark to light greens */
+    width: 50%;
+    transition: width 0.2s ease;
+}
+
+
+.rpm-bar.high {
+    background: linear-gradient(90deg, #0b4033 0%, #156653 30%, #25D5AC 50%, #FF9933 75%, #E24B59 100%);
+}
+
+
+.fuel-bar-container-vertical {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuel-icon-vertical {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    position: relative;
+    right: -3px;
+}
+
+.fuel-bar-vertical {
+    width: 15px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fuel-bar-fill-vertical {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #4ee3c8 0%, #25D5AC 40%, #156653 70%, #0b4033 100%); /* Reverse gradient to match vertical fill */
+    transition: height 0.2s ease;
+}
+
